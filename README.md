@@ -1,6 +1,8 @@
 # slack_notifier
 
-A script that notifies Slack on a regular basis (hourly, daily, or weekly) from Fly.io.
+A script that notifies Slack on a regular basis (hourly, daily, or weekly).
+
+This should be run with a cron job.
 
 ## Run Locally
 
@@ -11,13 +13,3 @@ A script that notifies Slack on a regular basis (hourly, daily, or weekly) from 
 - Create an environment variable named `SLACK_WEBHOOK_URL` that contains your URL (e.g., `export SLACK_WEBHOOK_URL=https://...`).
 - Transpile the TypeScript with `yarn build`.
 - Run the script with `yarn start`.
-
-## Deployment
-
-Deploy this on Fly.io.
-
-- Read about [scheduled machines](https://community.fly.io/t/new-feature-scheduled-machines/7398).
-- Sign up for a Fly.io account.
-- Install [flyctl](https://fly.io/docs/hands-on/install-flyctl/).
-- Run `flyctl launch`.
-- To redeploy, run `fly deploy`.
