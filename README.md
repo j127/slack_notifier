@@ -4,7 +4,7 @@ A script that notifies Slack on a regular basis (hourly, daily, or weekly) from 
 
 ## Run Locally
 
-- Set your node version to 20. (If you use [`nvm`](https://github.com/nvm-sh/nvm) you can type `nvm use`.)
+- Set your node version to 20. (If you use [`nvm`](https://github.com/nvm-sh/nvm) you can type `nvm use`.) Node 18 should work too, but 16 won't.
 - If you don't have `yarn` installed, get it with `npm i -g yarn`.
 - Type `yarn` to install the dependencies.
 - Create a Slack App that [can receive incoming webhooks](https://api.slack.com/messaging/webhooks), and connect a webhook URL to a specific Slack channel.
