@@ -22,7 +22,9 @@ async function notifySlack(message?: string): Promise<void> {
 
 async function main() {
     console.info("starting");
-    await notifySlack(); // optionally pass in a message here or edit `message.ts`
+
+    // Optionally pass in a message here -- see `message.ts` for the template.
+    await notifySlack();
 }
 
 main().then(() => {
