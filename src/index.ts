@@ -4,7 +4,8 @@ if (!SLACK_WEBHOOK_URL) {
 }
 
 async function notifySlack(message: string): Promise<void> {
-    fetch(SLACK_WEBHOOK_URL as string, {
+    console.info("Sending message to slack:", message);
+    await fetch(SLACK_WEBHOOK_URL as string, {
         method: "POST",
         body: JSON.stringify({ text: message }),
         headers: { "Content-Type": "application/json" },
@@ -12,6 +13,7 @@ async function notifySlack(message: string): Promise<void> {
 }
 
 async function main() {
+    console.info("starting");
     await notifySlack("ping");
 }
 

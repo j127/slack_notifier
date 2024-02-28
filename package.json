@@ -5,14 +5,16 @@
     "author": "Josh <backpack360@gmail.com>",
     "license": "MIT",
     "scripts": {
-        "start": "bun index.ts",
+        "clean": "rm -rf dist/",
+        "build": "yarn clean && tsc",
+        "start": "node dist/index.js",
         "format": "prettier --write '**/*.{md,mdx,ts,js,mjs,jsx,tsx,yaml,yml,json,html,css,scss,astro}'",
         "prepare": "husky"
     },
     "devDependencies": {
-        "@flydotio/dockerfile": "latest",
         "@types/node": "^20.11.22",
         "husky": "^9.0.11",
-        "prettier": "^3.2.5"
+        "prettier": "^3.2.5",
+        "typescript": "^5.3.3"
     }
 }
