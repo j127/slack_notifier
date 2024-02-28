@@ -9,7 +9,7 @@ import { createMessagePayload } from "./message";
  * Sends a message to Slack.
  */
 async function notifySlack(message?: string): Promise<void> {
-    const payload = createMessagePayload(message);
+    const payload: string = createMessagePayload(message);
 
     console.info("Sending payload to slack:", payload);
 
