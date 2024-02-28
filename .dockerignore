@@ -1,0 +1,27 @@
+.env
+dist/
+
+# developer tools
+.git/
+node_modules/
+__pycache__/
+.vim/
+.vscode/
+.idea/
+pg/
+.swc/
+
+# caches
+.cache/
+.parcel-cache/
+.mypy_cache/
+.next/
+.netlify/
+.wrangler/
+
+# phoenix
+deps/
+_build/
+.elixir_ls
+assets/
+priv/

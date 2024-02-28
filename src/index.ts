@@ -3,18 +3,26 @@ if (!SLACK_WEBHOOK_URL) {
     throw new Error("SLACK_WEBHOOK_URL is not set");
 }
 
-async function notifySlack(message: string): Promise<void> {
-    console.info("Sending message to slack:", message);
+import { createMessagePayload } from "./message";
+
+/**
+ * Sends a message to Slack.
+ */
+async function notifySlack(message?: string): Promise<void> {
+    const payload = createMessagePayload(message);
+
+    console.info("Sending payload to slack:", payload);
+
     await fetch(SLACK_WEBHOOK_URL as string, {
         method: "POST",
-        body: JSON.stringify({ text: message }),
+        body: payload,
         headers: { "Content-Type": "application/json" },
     });
 }
 
 async function main() {
     console.info("starting");
-    await notifySlack("ping");
+    await notifySlack(); // optionally pass in a message here or edit `message.ts`
 }
 
 main().then(() => {
