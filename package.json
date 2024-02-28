@@ -1,0 +1,10 @@
+{
+    "name": "slack_notifier",
+    "description": "Sends a message to Slack on regular intervals",
+    "version": "0.1.0",
+    "author": "Josh <backpack360@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "prettier": "^3.2.5"
+    }
+}
