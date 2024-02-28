@@ -4,7 +4,15 @@
     "version": "0.1.0",
     "author": "Josh <backpack360@gmail.com>",
     "license": "MIT",
+    "scripts": {
+        "start": "bun index.ts",
+        "format": "prettier --write '**/*.{md,mdx,ts,js,mjs,jsx,tsx,yaml,yml,json,html,css,scss,astro}'",
+        "prepare": "husky"
+    },
     "devDependencies": {
+        "@flydotio/dockerfile": "latest",
+        "@types/node": "^20.11.22",
+        "husky": "^9.0.11",
         "prettier": "^3.2.5"
     }
 }
