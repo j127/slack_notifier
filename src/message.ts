@@ -10,7 +10,8 @@ function generateRandomPhrase(): string {
  * Create the Slack message here. If you don't pass in a message, a random
  * phrase will be generated.
  *
- * Customize the payload with the block-kit-builder:
+ * If you want nicer-looking formatting, you can customize the payload with
+ * Slack's block-kit-builder:
  * https://app.slack.com/block-kit-builder/T02GADJQX
  */
 export function createMessagePayload(text?: string): string {
